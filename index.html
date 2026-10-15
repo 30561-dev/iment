@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iment — Increase your Environment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+<body>
+
+  <div id="cursor-glow" aria-hidden="true"></div>
+  <div id="progress-bar" aria-hidden="true"></div>
+
+  <!-- ═══ NAV ══════════════════════════════════════════════ -->
+  <nav id="nav" role="navigation" aria-label="Menu principal">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" aria-label="Iment - página inicial">
+        <svg class="logo-mark" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <rect width="28" height="28" rx="7" style="fill: var(--primary)"/>
+          <path d="M14 5.5L20.5 9.25V16.75L14 20.5L7.5 16.75V9.25L14 5.5Z"
+                stroke="oklch(0.09 0.022 252)" stroke-width="1.4" stroke-linejoin="round" fill="none"/>
+        </svg>
+        iment
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#manifesto">Quem Somos</a></li>
+        <li><a href="#ecossistema">Ecossistema</a></li>
+        <li><a href="#integramente">Integramente</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <div class="btn-magnetic-wrap nav-cta">
+        <a href="#contato" class="btn btn-outline">Falar com a Iment</a>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Alternar para tema claro">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+          <circle cx="8" cy="8" r="2.8"/>
+          <path d="M8 1v1.4M8 13.6V15M1 8h1.4M13.6 8H15M3 3l1 1M12 12l1 1M3 13l1-1M12 4l1-1"/>
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+          <path d="M13.5 10a6 6 0 01-7.5-7.5A6.5 6.5 0 1013.5 10z"/>
+        </svg>
+      </button>
+
+      <button class="nav-burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M3 5.5h14M3 10h14M3 14.5h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <div class="nav-mobile" id="mobile-nav">
+      <a href="#manifesto">Quem Somos</a>
+      <a href="#ecossistema">Ecossistema</a>
+      <a href="#integramente">Integramente</a>
+      <a href="#parceria">Por que a Iment</a>
+      <a href="#contato">Contato</a>
+      <a href="#contato" class="btn btn-fill">Falar com a Iment</a>
+    </div>
+  </nav>
+
+
+  <!-- ═══ HERO ══════════════════════════════════════════════ -->
+  <section id="hero" aria-labelledby="hero-heading">
+    <div class="hero-grid">
+
+      <div class="hero-left">
+        <div class="hero-tag">
+          <span class="tag-dot"></span>
+          SaaS &nbsp;/&nbsp; Mobile &nbsp;/&nbsp; Web
+        </div>
+
+        <h1 id="hero-heading"></h1><!-- Filled by JS with mask lines -->
+
+        <p class="sub">
+          Não criamos apenas softwares. A Iment desenvolve ecossistemas digitais completos que mudam o ambiente de negócios e transformam vidas.
+        </p>
+
+        <div class="hero-actions">
+          <div class="btn-magnetic-wrap">
+            <a href="#ecossistema" class="btn btn-fill btn-lg">Explorar Soluções</a>
+          </div>
+          <div class="btn-magnetic-wrap">
+            <a href="#integramente" class="btn btn-outline btn-lg">Ver Integramente</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Orbital visual -->
+      <div class="eco-visual" id="eco-visual" aria-hidden="true">
+        <div class="eco-ring eco-ring-1"></div>
+        <div class="eco-ring eco-ring-2"></div>
+        <div class="eco-ring eco-ring-3"></div>
+
+        <svg class="eco-lines" id="eco-lines" viewBox="0 0 440 440" fill="none"></svg>
+
+        <div class="eco-center-glow" id="eco-glow"></div>
+
+        <div class="eco-center">
+          <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
+            <rect width="72" height="72" rx="18" style="fill: var(--primary)"/>
+            <path d="M36 12L55 23V45L36 56L17 45V23L36 12Z"
+                  stroke="oklch(0.09 0.022 252)" stroke-width="2" stroke-linejoin="round" fill="none"/>
+          </svg>
+        </div>
+
+        <div class="eco-node" id="node-0">
+          <svg class="eco-node-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4">
+            <rect x="3.5" y="2" width="11" height="14" rx="2.5"/>
+            <path d="M7 15h4"/>
+          </svg>
+          <span class="eco-node-label">Mobile</span>
+        </div>
+        <div class="eco-node" id="node-1">
+          <svg class="eco-node-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4">
+            <rect x="1.5" y="4" width="15" height="10" rx="2.5"/>
+            <path d="M1.5 7h15"/>
+          </svg>
+          <span class="eco-node-label">Web</span>
+        </div>
+        <div class="eco-node" id="node-2">
+          <svg class="eco-node-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4">
+            <circle cx="9" cy="9" r="7"/>
+            <path d="M9 5.5v4l2.5 2"/>
+          </svg>
+          <span class="eco-node-label">SaaS</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ MANIFESTO ════════════════════════════════════════ -->
+  <section id="manifesto" aria-labelledby="manifesto-heading">
+    <div class="manifesto-wrap wrap">
+      <div class="manifesto-side">
+        <span class="label">Quem somos</span>
+        <div class="side-line"></div>
+      </div>
+      <div>
+        <p class="manifesto-statement" id="manifesto-heading">
+          Na Iment, somos um <em>laboratório de inovação viva.</em> Não um produto, não um serviço, mas um ecossistema completo que expande o ambiente em que negócios crescem e vidas mudam.
+        </p>
+        <p class="manifesto-sub">
+          "Increase your Environment" não é apenas um slogan. É o compromisso com cada linha de código que escrevemos, cada interface que desenhamos e cada solução que construímos para o mercado e para a sociedade.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ ECOSSISTEMA ══════════════════════════════════════ -->
+  <section id="ecossistema" aria-labelledby="eco-heading">
+    <div class="wrap">
+      <div class="eco-section-head">
+        <h2 id="eco-heading">Nossas soluções</h2>
+        <span>PORTFÓLIO // 03 FRENTES</span>
+      </div>
+      <div class="eco-list" id="eco-list">
+        <div class="eco-item">
+          <span class="eco-item-num">01</span>
+          <span class="eco-item-title">Aplicativos Móveis Premium</span>
+          <p class="eco-item-desc">Soluções nativas iOS e Android, fluidas e com design intuitivo. Construídas para reter, engajar e aproximar marcas e usuários.</p>
+          <span class="eco-item-arrow" aria-hidden="true">&#x2192;</span>
+        </div>
+        <div class="eco-item">
+          <span class="eco-item-num">02</span>
+          <span class="eco-item-title">Plataformas Web de Alta Performance</span>
+          <p class="eco-item-desc">Sites e sistemas robustos baseados na nuvem, criados para escalar sob demanda sem travamentos ou lentidão.</p>
+          <span class="eco-item-arrow" aria-hidden="true">&#x2192;</span>
+        </div>
+        <div class="eco-item">
+          <span class="eco-item-num">03</span>
+          <span class="eco-item-title">Infraestrutura SaaS com Suporte Contínuo</span>
+          <p class="eco-item-desc">Modelo SaaS completo: infraestrutura, segurança, atualizações e suporte. Você foca nos resultados, a Iment cuida do resto.</p>
+          <span class="eco-item-arrow" aria-hidden="true">&#x2192;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ INTEGRAMENTE ════════════════════════════════════ -->
+  <section id="integramente" aria-labelledby="integ-heading">
+    <div class="integ-grid">
+      <div class="integ-content">
+        <span class="integ-label">Inovação Social</span>
+        <h2 id="integ-heading">O app que prova que tecnologia também transforma vidas.</h2>
+        <p>O Integramente é um aplicativo móvel SaaS desenvolvido para apoiar pessoas autistas, suas famílias e terapeutas com rotinas, comunicação alternativa e acompanhamento de progresso.</p>
+        <div class="integ-quote">
+          <p>A tecnologia só é verdadeiramente inteligente quando gera acessibilidade e conexão.</p>
+        </div>
+        <p>É o reflexo do DNA da Iment: ideias inovadoras transformadas em aplicativos impecáveis, com escala garantida pelo modelo SaaS.</p>
+      </div>
+      <div class="phone-wrap" aria-hidden="true">
+        <div class="phone-outer">
+          <div class="phone">
+            <div class="ph-status"><div class="ph-notch"></div></div>
+            <div class="ph-screen">
+              <div class="ph-header">
+                <span class="ph-title">Integramente</span>
+                <div class="ph-avatar">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <circle cx="7" cy="4.5" r="2.5" stroke="white" stroke-width="1.2"/>
+                    <path d="M1.5 13c0-3 2.5-5 5.5-5s5.5 2 5.5 5" stroke="white" stroke-width="1.2" stroke-linecap="round"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="ph-section-label">Rotina de hoje</div>
+              <div class="ph-card">
+                <div class="ph-card-dot" style="background: oklch(0.55 0.22 248 / 0.4)"></div>
+                <div class="ph-card-info">
+                  <div class="ph-card-name">Terapia ABA - Manha</div>
+                  <div class="ph-card-time">08:00 · 60min</div>
+                </div>
+                <div class="ph-card-check done">
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5.5l2 2 4-4" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+              </div>
+              <div class="ph-card">
+                <div class="ph-card-dot" style="background: oklch(0.55 0.18 165 / 0.4)"></div>
+                <div class="ph-card-info">
+                  <div class="ph-card-name">Comunicacao alternativa</div>
+                  <div class="ph-card-time">10:30 · 45min</div>
+                </div>
+                <div class="ph-card-check"></div>
+              </div>
+              <div class="ph-card">
+                <div class="ph-card-dot" style="background: oklch(0.58 0.20 290 / 0.4)"></div>
+                <div class="ph-card-info">
+                  <div class="ph-card-name">Atividade de lazer</div>
+                  <div class="ph-card-time">14:00 · 30min</div>
+                </div>
+                <div class="ph-card-check"></div>
+              </div>
+              <div class="ph-section-label" style="margin-top:12px">Progresso semanal</div>
+              <div style="padding: 1px 0 0">
+                <div class="ph-prog-row">
+                  <span>Comunicacao</span>
+                  <span style="color: var(--primary)">72%</span>
+                </div>
+                <div class="ph-prog-track"><div class="ph-prog-fill" data-width="72" style="background: var(--primary)"></div></div>
+                <div class="ph-prog-row">
+                  <span>Rotina</span>
+                  <span style="color: oklch(0.55 0.18 165)">88%</span>
+                </div>
+                <div class="ph-prog-track"><div class="ph-prog-fill" data-width="88" style="background: oklch(0.55 0.18 165)"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ PARCERIA ═════════════════════════════════════════ -->
+  <section id="parceria" aria-labelledby="parceria-heading">
+    <div class="parceria-inner">
+      <div class="parceria-head">
+        <h2 id="parceria-heading">Por que escolher a Iment como parceira de inovação</h2>
+        <p>Não vendemos codigo. Construímos ecossistemas com visão de longo prazo.</p>
+      </div>
+      <div class="reasons-grid">
+        <div class="reason">
+          <span class="reason-num" data-target="1">01</span>
+          <h3>Identidade Própria</h3>
+          <p>Cada site e aplicativo reflete a essência do projeto. Nenhuma solução genérica sai daqui.</p>
+        </div>
+        <div class="reason">
+          <span class="reason-num" data-target="2">02</span>
+          <h3>Infraestrutura Escalável</h3>
+          <p>Tecnologias de ponta com segurança nativa, preparadas para crescer junto com a demanda.</p>
+        </div>
+        <div class="reason">
+          <span class="reason-num" data-target="3">03</span>
+          <h3>Parceiro Estratégico</h3>
+          <p>Não um fornecedor de codigo. Um parceiro com visão de futuro focado no crescimento real do seu negócio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ FAQ ══════════════════════════════════════════════ -->
+  <section id="faq" aria-labelledby="faq-heading">
+    <div class="faq-inner">
+      <h2 id="faq-heading">Perguntas frequentes</h2>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="fa1">
+          Como posso contratar as soluções da Iment?
+          <div class="faq-toggle">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1.5v7M1.5 5h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+        </button>
+        <div class="faq-body" id="fa1">
+          <p>Analisamos o cenário do seu negócio ou da sua ideia para indicar o produto do nosso ecossistema SaaS que melhor se adapta. Entre em contato pelo e-mail inovacao@iment.com para iniciar essa conversa.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="fa2">
+          A Iment desenvolve do zero ou oferece produtos prontos?
+          <div class="faq-toggle">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1.5v7M1.5 5h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+        </button>
+        <div class="faq-body" id="fa2">
+          <p>Criamos e gerenciamos softwares em modelo SaaS: soluções prontas e modulares com implantação rápida e custos otimizados. Cada projeto é personalizado, mas parte de uma base robusta já testada em produção.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="fa3">
+          Como o app Integramente se encaixa no ecossistema?
+          <div class="faq-toggle">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 1.5v7M1.5 5h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+        </button>
+        <div class="faq-body" id="fa3">
+          <p>O Integramente é o produto SaaS de impacto social da Iment, demonstrando nossa capacidade de criar aplicativos complexos com foco em experiência do usuário e acessibilidade, dentro do mesmo ecossistema tecnológico.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ CTA FINAL ════════════════════════════════════════ -->
+  <section id="contato" aria-labelledby="cta-heading">
+    <h2 id="cta-heading">Pronto para aumentar seu ambiente?</h2>
+    <p>Conecte-se com a Iment e descubra como transformamos ideias inovadoras em ecossistemas reais.</p>
+    <div class="btn-magnetic-wrap" style="display:inline-block">
+      <a href="mailto:inovacao@iment.com" class="btn btn-fill btn-lg">Falar com um Especialista</a>
+    </div>
+  </section>
+
+
+  <!-- ═══ FOOTER ════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="footer-row">
+      <a href="#" class="footer-logo" aria-label="Iment">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <rect width="20" height="20" rx="5" style="fill: var(--primary)"/>
+          <path d="M10 4L15.5 7.25V13.75L10 17L4.5 13.75V7.25L10 4Z"
+                stroke="oklch(0.09 0.022 252)" stroke-width="1.2" stroke-linejoin="round" fill="none"/>
+        </svg>
+        iment
+      </a>
+      <span class="footer-copy">&copy; 2026 Iment — Increase your Environment</span>
+      <nav class="footer-links">
+        <a href="#">Privacidade</a>
+        <a href="#">Termos</a>
+        <a href="mailto:inovacao@iment.com">inovacao@iment.com</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ═══ SCRIPTS ══════════════════════════════════════════ -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+          onerror="this.onerror=null;this.src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js'"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+          onerror="this.onerror=null;this.src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js'"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>
